@@ -1,0 +1,9 @@
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<h1><%= @question.title %></h1>
+
+<h3>Description: <%= @question.description %> </h3>
+
+<%= link_to 'Back', questions_path %> | <%= link_to 'Submit A Question', new_question_path %>
